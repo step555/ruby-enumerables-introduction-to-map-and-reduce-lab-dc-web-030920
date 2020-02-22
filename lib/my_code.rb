@@ -44,8 +44,14 @@ end
 
 #-----------------------------------------------------------------
 def reduce_to_total(source_array, starting_point = 0)
-  
-source_array.reduce(starting_point) { |sum, n| sum + n } 
+  i = 0
+  running_total = starting_point
+  while i < source_array.length do
+    running_total += source_array[i]
+    i += 1
+  end
+# source_array.reduce(starting_point) { |sum, n| sum + n } 
+  running_total
 end
 
 #-----------------------------------------------------------------
